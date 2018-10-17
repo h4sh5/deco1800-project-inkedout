@@ -1,0 +1,173 @@
+
+@font-face {
+    font-family: veteran-tp;
+    src: url(../fonts/veteran_typewriter.ttf);
+}
+
+@font-face {
+    font-family: canterbury;
+    src: url(../fonts/canterbury.ttf);
+}
+
+/* CSS reset */
+* { 
+    font-family: courier;
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    text-align: center;
+}
+
+.container:nth-child(1) {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.container {
+    width:  50%;
+    display: block;
+    float: left;
+}
+
+
+#title {
+    font-family: canterbury;
+    font-size: 10vh;
+}
+
+#question {
+    font-family: courier;
+}
+
+#bigcontainer{
+	margin:auto;
+	width:600px;
+	height:200px;
+	right:0; left:0; bottom:0; top:0;
+	position: absolute;
+	
+}
+
+.text{
+	text-align:center;
+    font-family: veteran-tp;
+    font-size: 10vh;
+}
+
+
+#question-form {
+    margin-top: 1%;
+    text-align: center;
+}
+
+button.question, a.question {
+    text-decoration: none;
+    padding: 0.5em;
+    margin-top: 0;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 3px solid black;
+    background: black;
+    color: white;
+    font-family: courier;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+button.question:hover, a.question:hover {
+    background: white;
+    color: black;
+    border: 3px solid white;
+}
+
+
+#skip {
+    margin: 1em;  
+}
+
+#submit {
+    margin: 1em;
+}
+
+
+button.result {
+
+    padding: 0.5em;
+
+    text-align:center; 	
+    margin-left:28%;
+    font-family: courier;
+	font-size:25px;
+	text-align:center;
+	width:40%;
+	background-color: black;
+    color: white;
+    border: 3px solid black;
+
+    cursor: pointer;
+}
+
+button.result:hover{
+	background-color: white;
+    color: black;
+    border: 3px solid white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+article {
+    background-image: url(../images/blank.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    width: 70%;
+    text-align: center;
+    padding: 2em;
+    margin-left: 10vw;
+    font-size: 1.3em;
+    line-height: 2em;
+
+    font-family: veteran-tp;
+}
+
+#smudge {
+    height: 1em;
+    width: 4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+#score {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    font-family: courier;
+    font-size: 1.2em;
+}
+	
+label.options {
+    font-size: 1.6em;
+    margin-right: 1em;
+    margin-left: 5px;
+    font-family: veteran-tp;
+
+    background-image: url(../images/blank.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#options {
+    display: inline;
+    
+}
+
+#progress {
+    text-align: left;
+}
+
+
