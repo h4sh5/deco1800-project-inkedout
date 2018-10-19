@@ -207,7 +207,7 @@ function create_question($story_number) {
     // if ($text == NULL || get_random_word($text)is_text_useless($text)) {
     if  (is_text_useless($text)) {
         error_log("running create_question again");
-        return create_question();
+        return create_question($story_number);
     }
     return new Question($text);
 

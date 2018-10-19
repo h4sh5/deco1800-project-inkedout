@@ -20,7 +20,7 @@
 }
 
 body {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/gallipoli.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -59,9 +59,11 @@ body.home {
 
 #question {
     font-family: courier;
+    font-weight: bold;
+
 }
 
-#bigcontainer{
+#bigcontainer {
 	margin:auto;
 	width:600px;
 	height:200px;
