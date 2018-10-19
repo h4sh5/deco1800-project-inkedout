@@ -9,6 +9,11 @@
     src: url(../fonts/canterbury.ttf);
 }
 
+@font-face {
+    font-family: dirty;
+    src: url(../fonts/vtks_dirty_2.ttf);
+}
+
 /* CSS reset */
 * { 
     font-family: courier;
@@ -21,6 +26,11 @@ body {
     background-size: cover;
 
     text-align: center;
+}
+
+
+body.home {
+    background-image: url('../images/gallipoli.jpg');
 }
 
 .container:nth-child(1) {
@@ -37,8 +47,14 @@ body {
 
 
 #title {
-    font-family: canterbury;
+    margin-top: 1em;
+    font-family: dirty;
     font-size: 10vh;
+}
+
+#title-red {
+    font-family: dirty;
+    color: red;
 }
 
 #question {
@@ -66,7 +82,7 @@ body {
     text-align: center;
 }
 
-button.question, a.question {
+button.fancybutton, a.fancybutton {
     text-decoration: none;
     padding: 0.5em;
     margin-top: 0;
@@ -79,7 +95,7 @@ button.question, a.question {
     cursor: pointer;
 }
 
-button.question:hover, a.question:hover {
+button.fancybutton:hover, a.fancybutton:hover {
     background: white;
     color: black;
     border: 3px solid white;
@@ -100,11 +116,11 @@ button.result {
     padding: 0.5em;
 
     text-align:center; 	
-    margin-left:28%;
+    /*margin-left: 28%;*/
     font-family: courier;
-	font-size:25px;
+	font-size: 25px;
 	text-align:center;
-	width:40%;
+	width: 40%;
 	background-color: black;
     color: white;
     border: 3px solid black;
@@ -170,4 +186,21 @@ label.options {
     text-align: left;
 }
 
+#progress-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
 
+}
+
+form {
+    padding-bottom: 2em;
+}
+
+#home-button {
+    display: inline-block;
+    margin-top: 2em;
+    width: 10vw;
+    text-align: center;
+    float: left;
+}

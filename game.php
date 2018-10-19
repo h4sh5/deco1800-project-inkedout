@@ -7,10 +7,15 @@ $errno = NULL;
 
 $trove_keywords = array(
     "At head of page: Forty-third Expeditionary Force number. Title: The Roll of Honour. Queensland casualties at the front. ",
-    "Our latest success",
+
+    "Our latest success", //short text, no pictures
+
     "From Gallipoli. Caption: Central News, photo. Caption: Returning from the trenches through a deep gully", //not correct article
+
     "Captain Graham Butler, D.S.O., a Brisbane doctor, who has been awarded the Distinguished Service Order for bravery at the Dardanelles", //correct article but words further down
+
     "Anzac sentinel sunset", //not the correct article, no image
+    
     "The residential club for returned soldiers and sailors"
 );
 
