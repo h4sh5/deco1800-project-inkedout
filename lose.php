@@ -15,7 +15,7 @@
          <h1 class="text">Aww... You got it wrong..</h1>
           
 		  
-	     <a href="journey.php?q=old"><button class="result" type="submit" >Try again</button></a>
+	     <a href="/journey.php?q=old"><button class="result" type="submit" >Try again</button></a>
 		  
 		  
 		  

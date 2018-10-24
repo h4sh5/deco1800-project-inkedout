@@ -15,7 +15,7 @@
          <h1 class="text">HUZZAH! You got it right!</h1>
           
           
-         <a href="journey.php?q=new"><button class="result" type="submit" >Next question</button></a>
+         <a href="/journey.php?q=new"><button class="result" type="submit" >Next question</button></a>
           
           
           

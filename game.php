@@ -6,7 +6,8 @@ $errno = NULL;
 
 
 $trove_keywords = array(
-    "At head of page: Forty-third Expeditionary Force number. Title: The Roll of Honour. Queensland casualties at the front. ",
+    // "At head of page: Forty-third Expeditionary Force number. Title: The Roll of Honour. Queensland casualties at the front. ",
+    "Forty-third Expeditionary Force number",
 
     "Our latest success", //short text, no pictures
 
@@ -111,10 +112,7 @@ function get_article_txt($articleId) {
     restore_error_handler();
 
     if (count(explode(' ', $article)) > 300) { //truncate text if its > 300 words
-        $article = explode(' ', $article);
-        $article = array_slice($article, 0, 300);
-        array_push($article, "<br>------- snipped ---------");
-        $article = join(' ', $article);
+        $article = snipp_txt($article, 0, 300);
     }
     return $article;
 }
@@ -165,6 +163,15 @@ corresponding to the trove_keywords
 */
 function get_image($story_number) {
     global $slqUrl, $trove_keywords;
+
+    //some hardcoding
+    if ($story_number == 1) {
+        return "images/latest_success.jpeg";
+    }
+    if ($story_number == 2) {
+        return "images/tuckerman.jpg";
+    }
+
 
     $keywords = explode(" ", $trove_keywords[$story_number]);
     $first10 = join(" ", array_slice($keywords, 0 ,10));

@@ -1,10 +1,6 @@
 <?php
 set_time_limit(5);
 session_start();
-if ($_SESSION["story"] == NULL) {
-	error_log("new session!");
-	$_SESSION["story"] = 0; //the journey of story
-}
 
 require_once('game.php');
 
@@ -22,6 +18,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 
 } else {
+
+	if (!startsWith($_SERVER['REQUEST_URI'], "/journey.php")) {
+		die();
+	}
+
+	if (session_status() == PHP_SESSION_NONE) {
+	    session_start();
+	}
+
+	if ($_SESSION['story'] == NULL) {
+		$_SESSION['story'] = 0;
+		error_log("new session!");
+	}
 
 	if ($_SESSION['story'] == 6) {
 		header('Location: '. "pieces.php");
