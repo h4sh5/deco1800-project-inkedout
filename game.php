@@ -48,8 +48,6 @@ class Question {
 
 }
 
-
-
 //query to pull all photos digitised from the queenslanders from SLQ
 $query = "SELECT * from \"5bc00f98-2d96-47d6-a0ca-2089ebd1130d\"" . 
     "WHERE \"500_pixel\" LIKE 'Digitised%' LIMIT 500";
@@ -71,7 +69,24 @@ function warning_handler($level, $msg) {
     }
 }
 
+/* snipp the txt by the lower and upper bound */
+function snipp_txt($txt, $lower, $upper) {
 
+    $result = array();
+    if ($lower != 0) {
+        array_push($result, "------- snipped ---------<br>");
+    }
+    $txt_array = explode(" ", $txt);
+    $sliced = array_slice($txt_array, $lower, $upper);
+    // print_r($sliced);
+
+    $result = array_merge($result, $sliced);
+    if ($upper < sizeof($txt_array)) {
+        array_push($result, "<br>------- snipped ---------");
+    }
+    return join(' ', $result);
+
+}
 
 /*
 Gets the plain text of a newspaper article given an articleId, and strip all
@@ -98,7 +113,7 @@ function get_article_txt($articleId) {
     if (count(explode(' ', $article)) > 300) { //truncate text if its > 300 words
         $article = explode(' ', $article);
         $article = array_slice($article, 0, 300);
-        array_push($article, "------- snipped ---------");
+        array_push($article, "<br>------- snipped ---------");
         $article = join(' ', $article);
     }
     return $article;

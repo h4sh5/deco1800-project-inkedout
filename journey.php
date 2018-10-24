@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		<form method="post" action="journey.php" id="question-form">
 
-			<!-- <a href='journey.php' class='fancybutton'>Skip</a> -->
+			<a href='journey.php' class='fancybutton'>Shuffle Smudge</a>
 			<div id='options'>
 			<?php
 				$options = $question->get_options(); //generate new options here

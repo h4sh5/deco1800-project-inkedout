@@ -43,8 +43,7 @@ function drop(ev) {
     }
 
     //TODO: transfer entire div / toggle background
-    ev.target.appendChild(document.getElementById(elementId));
-
-    
+    ev.target.appendChild(document.getElementById(elementId));    
     // ev.target.innerHTML = document.getElementById(data).innerHTML;
 }
+

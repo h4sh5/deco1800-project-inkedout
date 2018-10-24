@@ -33,6 +33,11 @@ body.home {
     background-image: url('../images/gallipoli.jpg');
 }
 
+#description{
+    font-family: veteran-tp;
+    margin: 2em;
+}
+
 .container:nth-child(1) {
     display: block;
     width: 100%;
@@ -141,7 +146,7 @@ button.result:hover{
 article {
     background-image: url(../images/blank.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 105%;
 
     width: 70%;
     text-align: center;
@@ -231,17 +236,32 @@ div.dragdrop {
     background-image: url(../images/torn_page.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    margin-bottom: 5em;
+    width: 500px;
+    height: 200px;
+/*    width: auto;
+    height: auto;*/
 }
 
 #targets-box div {
     background-image: url(../images/tornhole.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    margin-bottom: 5em;
+    /*background-size: auto auto;*/
+    width: 500px;
+    height: 200px;
 }
-/*
+
+#targets-box div p {
+    width: 100%;
+    height: 120%;
+}
+
 p.item {
     background-image: url(../images/torn_page.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 120%;
+    /*margin: 2em;*/
 }
-*/
+

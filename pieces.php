@@ -21,43 +21,20 @@ if ($_SESSION["story"] == NULL) {
         <!-- think about dynamically generated drag and drop -->
         <div id="articles-box">
 
-                <?php
-                    //load all the articles into the boxes
+            <?php
+                //load all the articles into the boxes
 
-                    require_once("game.php");
-                    foreach ($trove_keywords as $keywords) {
-                        $keywords = explode(" ", $keywords);
-                        $first10 = join(" ", array_slice($keywords, 0 ,10));
-                        $text = get_article_txt(get_article_id($first10));
-                        echo '<div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p class="item dragdrop" draggable="true" ondragstart="drag(event)">'. $text . '</p></div>';
-                    }
+                require_once("game.php");
+                foreach ($trove_keywords as $keywords) {
+                    $keywords = explode(" ", $keywords);
+                    $first10 = join(" ", array_slice($keywords, 0 ,10));
+                    $text = get_article_txt(get_article_id($first10));
+                    echo '<div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p class="item dragdrop" draggable="true" ondragstart="drag(event)">'. snipp_txt($text, 40, 90) . '</p></div>';
+                    // echo '<p class="item dragdrop" draggable="true" ondragstart="drag(event)">'. snipp_txt($text, 20, 60) . '</p>';
+                }
 
-                ?>
-                <!-- <div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p class="item dragdrop" id="text1" draggable="true" ondragstart="drag(event)">1</p>
-                </div>
-                
-                <div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p class="item dragdrop" class="dragdrop" id="text2" draggable="true" ondragstart="drag(event)">2</p>
-                </div>
-                
-                <div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p class="item dragdrop" class="dragdrop" id="text3" draggable="true" ondragstart="drag(event)">3</p>
-                </div>  
-                
-                <div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p class="item dragdrop" class="dragdrop" id="text4" draggable="true" ondragstart="drag(event)">4</p>
-                </div>
-
-                <div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p class="item dragdrop" class="dragdrop" id="text4" draggable="true" ondragstart="drag(event)">5</p>
-                </div>
-
-                <div class="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <p class="item dragdrop" class="dragdrop" id="text4" draggable="true" ondragstart="drag(event)">6</p>
-                </div> -->
-
+            ?>
 
             </div>
             
