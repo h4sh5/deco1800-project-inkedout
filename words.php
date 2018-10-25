@@ -93,16 +93,17 @@ if there is an external file, open it and use it as a resource instead of articl
 function gen_options($article, $word, $story_number, $externalFile = NULL) {
     $article = strip_tags($article);
     $words = array();
+    $words[3] = strtolower($word);
 
     for ($i = 0; $i < 3; $i++) {
         $choice = strtolower(get_random_word($article, $story_number));
-        while (in_array($choice, $words)) {
+        while (in_array($choice, $words) || $choice == $word) {
             $choice = strtolower(get_random_word($article, $story_number));
         }
         $words[$i] = $choice;
 
      }
-    $words[3] = strtolower($word);
+    
     shuffle($words);
 
     return $words;
