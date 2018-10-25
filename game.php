@@ -20,17 +20,16 @@ $trove_keywords = array(
     "The residential club for returned soldiers and sailors"
 );
 
-
 class Question {
     public $article, $options;
     private $answer;
 
-    function __construct($article) {
-        $smudgeResult = smudge_random_word($article);
+    function __construct($article, $story_number) {
+        $smudgeResult = smudge_random_word($article, $story_number);
         $this->article = $smudgeResult[0];
         $this->answer = $smudgeResult[1];
         //use original article to generate options
-        $this->options = gen_options($article, $this->answer);
+        $this->options = gen_options($article, $this->answer, $story_number);
     }
 
     function check_answer($answer) {
@@ -171,7 +170,9 @@ function get_image($story_number) {
     if ($story_number == 2) {
         return "images/tuckerman.jpg";
     }
-
+    if ($story_number == 4) {
+        return "images/mine_explosion.png";
+    }
 
     $keywords = explode(" ", $trove_keywords[$story_number]);
     $first10 = join(" ", array_slice($keywords, 0 ,10));
@@ -231,7 +232,7 @@ function create_question($story_number) {
         error_log("running create_question again");
         return create_question($story_number);
     }
-    return new Question($text);
+    return new Question($text, $story_number);
 
 }
 
