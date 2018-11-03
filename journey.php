@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<h3 id='story'>
 			<!--story: -->
 			<div class="w3-black w3-round-large" id="progress-bar">
-				<div class="w3-container w3-white" id="progress" style="width:<?php echo ($_SESSION['story'] + 1 / 7 * 100); ?>%"><?php echo ($_SESSION['story'] + 1)?>/7</div>
+				<div class="w3-container w3-white" id="progress" style="width:<?php echo (($_SESSION['story'] + 1) / 7 * 100); ?>%"><?php echo ($_SESSION['story'] + 1)?>/7</div>
 			</div>
 
 		</h3>
