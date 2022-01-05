@@ -1,5 +1,0 @@
-- find out ones with no images (change the keywords)
-- editting some text
-- choose good list of words for option
-
-- make landing page
